@@ -17,9 +17,9 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--surface-header)] backdrop-blur">
-      <Container className="flex items-center justify-between py-[var(--space-4)]">
-        <Link href="/" className="text-sm font-semibold tracking-tight sm:text-base">
+    <header className="topbar">
+      <Container className="topbar-inner">
+        <Link href="/" className="site-wordmark">
           {siteConfig.name}
         </Link>
         <nav aria-label="Primary navigation">

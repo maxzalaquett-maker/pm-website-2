@@ -14,7 +14,7 @@ export default function HomePage() {
       <Hero />
 
       <Section>
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid-proof">
           {site.home.proofItems.map((item) => (
             <Card key={item}>
               <p className="muted-copy text-sm leading-6">{item}</p>
@@ -29,7 +29,7 @@ export default function HomePage() {
         title="Case studies grounded in product thinking"
         description="Examples of strategy work focused on trust, clarity, and better decision-making in complex domains."
       >
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid-cards" data-columns="3">
           {featuredCaseStudies.map((caseStudy) => (
             <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
           ))}
@@ -42,7 +42,7 @@ export default function HomePage() {
         title="How I Approach Product Work"
         description="Trusted products come from clear thinking, honest tradeoffs, and disciplined prioritization."
       >
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="button-row">
           <Button href="/principles" variant="secondary">
             Read principles
           </Button>

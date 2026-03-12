@@ -23,11 +23,11 @@ export default async function AccessPage({ searchParams }: AccessPageProps) {
       description="The case study section is lightly protected for private sharing."
       narrow
     >
-      <Card className="max-w-md bg-[var(--surface-strong)] p-[var(--space-5)]">
+      <Card className="panel-strong max-w-md">
         {isWorkProtectionEnabled() ? (
           <AccessForm nextPath={nextPath} />
         ) : (
-          <div className="space-y-4">
+          <div className="stack-copy">
             <p className="muted-copy text-sm leading-6">
               Access is currently open.
             </p>
@@ -39,7 +39,7 @@ export default async function AccessPage({ searchParams }: AccessPageProps) {
       </Card>
 
       <form action={lockWork} className="mt-6">
-        <button type="submit" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)]">
+        <button type="submit" className="text-link">
           Clear saved access
         </button>
       </form>

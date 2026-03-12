@@ -55,17 +55,17 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             titleAs="h1"
             className="mt-[var(--space-5)] max-w-[52rem]"
           />
-          <Card as="dl" className="mt-[var(--space-5)] grid gap-5 sm:grid-cols-3">
+          <Card as="dl" className="meta-grid mt-[var(--space-5)]">
             <div>
-              <dt className="muted-copy text-sm font-medium">Industry</dt>
-              <dd className="mt-2 text-base">{caseStudy.industry}</dd>
+              <dt className="meta-label">Industry</dt>
+              <dd className="meta-value">{caseStudy.industry}</dd>
             </div>
             <div>
-              <dt className="muted-copy text-sm font-medium">Role</dt>
-              <dd className="mt-2 text-base">{caseStudy.role}</dd>
+              <dt className="meta-label">Role</dt>
+              <dd className="meta-value">{caseStudy.role}</dd>
             </div>
             <div>
-              <dt className="muted-copy text-sm font-medium">Skills</dt>
+              <dt className="meta-label">Skills</dt>
               <dd className="mt-3 flex flex-wrap gap-2">
                 {caseStudy.skills.map((skill) => (
                   <SkillTag key={skill} label={skill} />
@@ -77,19 +77,19 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <Section title="Why this mattered" narrow>
-        <p className="body-copy muted-copy max-w-[var(--content-measure)]">{caseStudy.whyThisMattered}</p>
+        <p className="body-copy muted-copy prose-measure">{caseStudy.whyThisMattered}</p>
       </Section>
 
       <Section title="The problem" narrow>
-        <p className="body-copy muted-copy max-w-[var(--content-measure)]">{caseStudy.problem}</p>
+        <p className="body-copy muted-copy prose-measure">{caseStudy.problem}</p>
       </Section>
 
       <Section title="My role" narrow>
-        <p className="body-copy muted-copy max-w-[var(--content-measure)]">{caseStudy.myRole}</p>
+        <p className="body-copy muted-copy prose-measure">{caseStudy.myRole}</p>
       </Section>
 
       <Section title="Discovery and insights" narrow>
-        <ul className="grid gap-4">
+        <ul className="list-cards">
           {caseStudy.discoveryAndInsights.map((item) => (
             <Card key={item} as="li">
               {item}
@@ -99,7 +99,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </Section>
 
       <Section title="Key decisions" narrow>
-        <ul className="grid gap-4">
+        <ul className="list-cards">
           {caseStudy.keyDecisions.map((item) => (
             <Card key={item} as="li">
               {item}
@@ -109,7 +109,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </Section>
 
       <Section title="Outcome" narrow>
-        <p className="body-copy muted-copy max-w-[var(--content-measure)]">{caseStudy.outcome}</p>
+        <p className="body-copy muted-copy prose-measure">{caseStudy.outcome}</p>
       </Section>
 
       <Section title="Skills demonstrated" narrow>

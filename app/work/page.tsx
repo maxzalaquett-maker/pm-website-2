@@ -11,7 +11,7 @@ export default function WorkPage() {
       title="Selected case studies"
       description="A small set of product strategy projects across financial services and healthcare."
     >
-      <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid-cards" data-columns="3">
         {caseStudies.map((caseStudy) => (
           <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
         ))}

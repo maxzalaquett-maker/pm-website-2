@@ -13,13 +13,11 @@ export default function AboutPage() {
       description={site.about.description}
     >
       <div className="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)]">
-        <div className="body-copy muted-copy max-w-2xl space-y-6">
+        <div className="body-copy muted-copy prose-measure stack-copy">
           <p>{site.about.summary}</p>
         </div>
-        <Card as="aside" className="bg-[var(--surface-strong)] p-[var(--space-5)]">
-          <h2 className="text-[var(--font-size-lg)] font-semibold tracking-[-0.03em] text-[var(--foreground)]">
-            Areas of focus
-          </h2>
+        <Card as="aside" className="panel-strong">
+          <h2 className="card-title">Areas of focus</h2>
           <div className="mt-[var(--space-4)] flex flex-wrap gap-3">
             {site.about.focusAreas.map((item) => (
               <SkillTag key={item} label={item} />
