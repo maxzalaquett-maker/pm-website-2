@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className="mt-8">
         <Link
           href="/"
-          className="inline-flex rounded-full border border-[var(--border)] px-5 py-3 text-sm font-medium hover:border-[var(--accent)] hover:text-[var(--accent)]"
+          className="button-secondary"
         >
           Return home
         </Link>

@@ -42,7 +42,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     <>
       <section className="mx-auto w-full max-w-4xl px-6 py-12 sm:py-16">
         <Link
-          className="inline-flex rounded-full border border-[var(--border)] px-4 py-2 text-sm font-medium hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--background)]"
+          className="button-secondary"
           href="/work"
         >
           Back to work

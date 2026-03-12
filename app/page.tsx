@@ -49,13 +49,13 @@ export default function HomePage() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <Link
             href="/principles"
-            className="inline-flex rounded-full border border-[var(--border)] px-5 py-3 text-sm font-medium hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            className="button-secondary"
           >
             Read principles
           </Link>
           <a
             href="/resume.pdf"
-            className="inline-flex rounded-full border border-[var(--border)] px-5 py-3 text-sm font-medium hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            className="button-primary"
           >
             Download resume
           </a>

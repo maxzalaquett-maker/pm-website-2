@@ -30,7 +30,7 @@ export default async function AccessPage({ searchParams }: AccessPageProps) {
             </p>
             <a
               href={nextPath}
-              className="inline-flex rounded-full border border-[var(--border)] px-5 py-3 text-sm font-medium hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              className="button-secondary"
             >
               Continue to work
             </a>

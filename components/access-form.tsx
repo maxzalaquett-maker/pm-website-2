@@ -34,7 +34,7 @@ export function AccessForm({ nextPath }: AccessFormProps) {
       <button
         type="submit"
         disabled={isPending}
-        className="inline-flex w-full items-center justify-center rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-[var(--background)] hover:bg-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-70"
+        className="button-primary w-full disabled:cursor-not-allowed disabled:opacity-70"
       >
         {isPending ? "Checking..." : "Unlock work"}
       </button>
