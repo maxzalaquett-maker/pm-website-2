@@ -46,8 +46,8 @@
   --radius-lg: 1.5rem;
   --radius-xl: 2rem;
   --radius-pill: 9999px;
-  --radius-card: var(--radius-lg);
-  --radius-input: var(--radius-md);
+  --radius-card: var(--radius-xs);
+  --radius-input: var(--radius-xs);
 
   --font-sans: "Inter Variable", sans-serif;
   --text-display: clamp(2.25rem, 5vw, 3.75rem);
@@ -121,14 +121,6 @@ body {
       radial-gradient(circle at top left, rgb(31 78 82 / 0.08), transparent 42%),
       linear-gradient(180deg, var(--color-surface-container-high), rgb(255 255 255 / 0.48));
     padding: var(--space-4);
-  }
-
-  .hero-visual-frame::after {
-    content: "";
-    position: absolute;
-    inset: auto 1.25rem 1.25rem;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgb(139 138 124 / 0.7), transparent);
   }
 
   .hero-visual-svg {
@@ -269,24 +261,38 @@ body {
   }
 
   .card-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: var(--space-3);
+    display: grid;
+    gap: var(--space-1);
+    margin-block: var(--space-2) var(--space-3);
     color: var(--color-on-surface-muted);
+    font-size: var(--text-body);
+    line-height: 1.5;
+  }
+
+  .card-meta-row {
+    display: flex;
+    gap: 0.35rem;
+    align-items: baseline;
+  }
+
+  .card-meta-label {
     font-size: var(--text-label);
+    font-weight: 600;
+    color: var(--color-on-surface);
   }
 
   .tag-base {
     display: inline-flex;
     align-items: center;
     border: 1px solid var(--color-outline-variant);
-    border-radius: var(--radius-pill);
-    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-xs);
+    padding: 0.3rem 0.7rem;
     background: color-mix(in srgb, var(--color-surface-container-high) 70%, transparent);
     color: var(--color-on-surface-muted);
     font-size: var(--text-label);
+    line-height: 1.2;
+    user-select: none;
+    pointer-events: none;
   }
 
   .nav-link {

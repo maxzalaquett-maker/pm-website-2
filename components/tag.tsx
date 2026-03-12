@@ -8,5 +8,9 @@ type TagProps = {
 };
 
 export function Tag({ children, className }: TagProps) {
-  return <span className={cx("tag-base", className)}>{children}</span>;
+  return (
+    <span className={cx("tag-base", className)} aria-disabled="true">
+      {children}
+    </span>
+  );
 }

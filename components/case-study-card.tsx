@@ -10,15 +10,21 @@ type CaseStudyCardProps = {
 export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
     <Card interactive className="flex h-full flex-col">
-      <div className="card-meta">
-        <span>{caseStudy.industry}</span>
-        <span>{caseStudy.role}</span>
-      </div>
       <h3 className="card-title">{caseStudy.title}</h3>
+      <div className="card-meta">
+        <p className="card-meta-row">
+          <span className="card-meta-label">Industry:</span>
+          <span>{caseStudy.industry}</span>
+        </p>
+        <p className="card-meta-row">
+          <span className="card-meta-label">Role:</span>
+          <span>{caseStudy.role}</span>
+        </p>
+      </div>
       <p className="body-copy muted-copy mt-[var(--space-2)] flex-1">{caseStudy.summary}</p>
       <div className="mt-[var(--space-4)] flex flex-wrap gap-2">
         {caseStudy.skills.map((skill) => (
-          <Tag key={skill} className="text-xs font-medium">
+          <Tag key={skill}>
             {skill}
           </Tag>
         ))}
