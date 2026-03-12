@@ -1,3 +1,5 @@
+import { Button } from "@/components/button";
+import { Card } from "@/components/card";
 import { AccessForm } from "@/components/access-form";
 import { Section } from "@/components/section";
 import { isWorkProtectionEnabled } from "@/lib/work-auth";
@@ -19,24 +21,22 @@ export default async function AccessPage({ searchParams }: AccessPageProps) {
       eyebrow="Private work"
       title="Enter password"
       description="The case study section is lightly protected for private sharing."
+      narrow
     >
-      <div className="max-w-md rounded-3xl border border-[var(--border)] bg-white/70 p-6">
+      <Card className="max-w-md bg-[var(--surface-strong)] p-[var(--space-5)]">
         {isWorkProtectionEnabled() ? (
           <AccessForm nextPath={nextPath} />
         ) : (
           <div className="space-y-4">
-            <p className="text-sm leading-6 text-[var(--muted)]">
+            <p className="muted-copy text-sm leading-6">
               Access is currently open.
             </p>
-            <a
-              href={nextPath}
-              className="button-secondary"
-            >
+            <Button href={nextPath} variant="secondary">
               Continue to work
-            </a>
+            </Button>
           </div>
         )}
-      </div>
+      </Card>
 
       <form action={lockWork} className="mt-6">
         <button type="submit" className="text-sm text-[var(--muted)] hover:text-[var(--foreground)]">

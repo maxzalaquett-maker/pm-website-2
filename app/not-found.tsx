@@ -1,21 +1,20 @@
-import Link from "next/link";
+import { Button } from "@/components/button";
+import { Container } from "@/components/container";
+import { PageIntro } from "@/components/page-intro";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto flex min-h-[60vh] w-full max-w-3xl flex-col justify-center px-6 py-20">
-      <p className="text-sm font-medium uppercase tracking-[0.18em] text-[var(--accent)]">Not found</p>
-      <h1 className="mt-4 text-4xl font-semibold tracking-tight">That page does not exist.</h1>
-      <p className="mt-4 max-w-xl text-base leading-7 text-[var(--muted)]">
-        The link may be outdated, or the page may have been moved.
-      </p>
-      <div className="mt-8">
-        <Link
-          href="/"
-          className="button-secondary"
-        >
+    <Container narrow className="flex min-h-[60vh] flex-col justify-center py-20">
+      <PageIntro
+        eyebrow="Not found"
+        title="That page does not exist."
+        description="The link may be outdated, or the page may have been moved."
+      />
+      <div className="mt-[var(--space-5)]">
+        <Button href="/" variant="secondary">
           Return home
-        </Link>
+        </Button>
       </div>
-    </div>
+    </Container>
   );
 }

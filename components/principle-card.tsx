@@ -1,3 +1,4 @@
+import { Card } from "@/components/card";
 import { Principle } from "@/lib/types";
 
 type PrincipleCardProps = {
@@ -6,9 +7,9 @@ type PrincipleCardProps = {
 
 export function PrincipleCard({ principle }: PrincipleCardProps) {
   return (
-    <article className="rounded-3xl border border-[var(--border)] bg-white/65 p-5">
-      <h3 className="text-xl font-semibold tracking-tight">{principle.title}</h3>
-      <p className="mt-3 text-base leading-7 text-[var(--muted)]">{principle.description}</p>
-    </article>
+    <Card>
+      <h3 className="text-[var(--font-size-xl)] font-semibold tracking-[-0.03em]">{principle.title}</h3>
+      <p className="body-copy muted-copy mt-[var(--space-2)]">{principle.description}</p>
+    </Card>
   );
 }

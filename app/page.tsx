@@ -1,5 +1,5 @@
-import Link from "next/link";
-
+import { Button } from "@/components/button";
+import { Card } from "@/components/card";
 import { CaseStudyCard } from "@/components/case-study-card";
 import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
@@ -16,9 +16,9 @@ export default function HomePage() {
       <Section>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {site.home.proofItems.map((item) => (
-            <div key={item} className="rounded-3xl border border-[var(--border)] bg-white/60 p-5">
-              <p className="text-sm leading-6 text-[var(--muted)]">{item}</p>
-            </div>
+            <Card key={item}>
+              <p className="muted-copy text-sm leading-6">{item}</p>
+            </Card>
           ))}
         </div>
       </Section>
@@ -43,18 +43,12 @@ export default function HomePage() {
         description="Trusted products come from clear thinking, honest tradeoffs, and disciplined prioritization."
       >
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Link
-            href="/principles"
-            className="button-secondary"
-          >
+          <Button href="/principles" variant="secondary">
             Read principles
-          </Link>
-          <a
-            href="/resume.pdf"
-            className="button-primary"
-          >
+          </Button>
+          <Button href="/resume.pdf" variant="primary">
             Download resume
-          </a>
+          </Button>
         </div>
       </Section>
     </>

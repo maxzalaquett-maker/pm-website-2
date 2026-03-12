@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="min-h-screen">
+        <div className="page-shell">
           <Nav />
           <main>{children}</main>
           <Footer />

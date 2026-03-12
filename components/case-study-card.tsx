@@ -1,5 +1,6 @@
-import Link from "next/link";
-
+import { Button } from "@/components/button";
+import { Card } from "@/components/card";
+import { Tag } from "@/components/tag";
 import { CaseStudy } from "@/lib/types";
 
 type CaseStudyCardProps = {
@@ -8,29 +9,23 @@ type CaseStudyCardProps = {
 
 export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
-    <article className="flex h-full flex-col rounded-3xl border border-[var(--border)] bg-white/70 p-5">
-      <div className="mb-4 flex items-center justify-between gap-4 text-sm text-[var(--muted)]">
+    <Card className="flex h-full flex-col">
+      <div className="mb-[var(--space-3)] flex items-center justify-between gap-4 text-sm text-[var(--muted)]">
         <span>{caseStudy.industry}</span>
         <span>{caseStudy.role}</span>
       </div>
-      <h3 className="text-2xl font-semibold tracking-tight">{caseStudy.title}</h3>
-      <p className="mt-3 flex-1 text-base leading-7 text-[var(--muted)]">{caseStudy.summary}</p>
-      <div className="mt-5 flex flex-wrap gap-2">
+      <h3 className="text-[var(--font-size-2xl)] font-semibold tracking-[-0.03em]">{caseStudy.title}</h3>
+      <p className="body-copy muted-copy mt-[var(--space-2)] flex-1">{caseStudy.summary}</p>
+      <div className="mt-[var(--space-4)] flex flex-wrap gap-2">
         {caseStudy.skills.map((skill) => (
-          <span
-            key={skill}
-            className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-medium text-[var(--muted)]"
-          >
+          <Tag key={skill} className="text-xs font-medium">
             {skill}
-          </span>
+          </Tag>
         ))}
       </div>
-      <Link
-        href={`/work/${caseStudy.slug}`}
-        className="button-secondary mt-6 self-start"
-      >
+      <Button href={`/work/${caseStudy.slug}`} variant="secondary" className="mt-[var(--space-4)] self-start">
         View case study
-      </Link>
-    </article>
+      </Button>
+    </Card>
   );
 }

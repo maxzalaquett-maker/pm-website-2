@@ -4,6 +4,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { Container } from "@/components/container";
 import { siteConfig } from "@/lib/site-config";
 
 const links: Array<{ href: Route; label: string }> = [
@@ -16,8 +17,8 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[color:rgba(250,250,248,0.92)] backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+    <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--surface-header)] backdrop-blur">
+      <Container className="flex items-center justify-between py-[var(--space-4)]">
         <Link href="/" className="text-sm font-semibold tracking-tight sm:text-base">
           {siteConfig.name}
         </Link>
@@ -30,11 +31,8 @@ export function Nav() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`inline-flex rounded-full border px-3 py-2 font-medium ${
-                      isActive
-                        ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--background)]"
-                        : "border-transparent hover:border-[var(--border)] hover:text-[var(--foreground)]"
-                    }`}
+                    className="nav-link"
+                    data-active={isActive}
                   >
                     {link.label}
                   </Link>
@@ -43,7 +41,7 @@ export function Nav() {
             })}
             <li>
               <a
-                className="inline-flex rounded-full border border-transparent px-3 py-2 font-medium hover:border-[var(--border)] hover:text-[var(--foreground)]"
+                className="nav-link"
                 href="/resume.pdf"
               >
                 Resume
@@ -51,7 +49,7 @@ export function Nav() {
             </li>
           </ul>
         </nav>
-      </div>
+      </Container>
     </header>
   );
 }

@@ -1,32 +1,24 @@
 import { ReactNode } from "react";
 
+import { Container } from "@/components/container";
+import { PageIntro } from "@/components/page-intro";
+
 type SectionProps = {
   id?: string;
   eyebrow?: string;
   title?: string;
   description?: string;
   children: ReactNode;
+  narrow?: boolean;
 };
 
-export function Section({ id, eyebrow, title, description, children }: SectionProps) {
+export function Section({ id, eyebrow, title, description, children, narrow = false }: SectionProps) {
   return (
-    <section id={id} className="border-t border-[var(--border)] py-12 sm:py-16">
-      <div className="mx-auto w-full max-w-6xl px-6">
-        {(eyebrow || title || description) && (
-          <div className="mb-8 max-w-2xl">
-            {eyebrow ? (
-              <p className="mb-2 text-sm font-medium uppercase tracking-[0.18em] text-[var(--accent)]">
-                {eyebrow}
-              </p>
-            ) : null}
-            {title ? <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h2> : null}
-            {description ? (
-              <p className="mt-3 text-base leading-7 text-[var(--muted)] sm:text-lg">{description}</p>
-            ) : null}
-          </div>
-        )}
+    <section id={id} className="section-default">
+      <Container narrow={narrow}>
+        {title ? <PageIntro eyebrow={eyebrow} title={title} description={description} /> : null}
         {children}
-      </div>
+      </Container>
     </section>
   );
 }
