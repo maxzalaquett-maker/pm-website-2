@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="footer-shell">
       <Container className="footer-inner">
-        <p className="text-[var(--foreground)]">{siteConfig.name}</p>
+        <p className="text-[var(--color-on-surface)]">{siteConfig.name}</p>
         <div className="footer-links">
           <Link className="footer-link" href={siteConfig.linkedinUrl} target="_blank">
             LinkedIn

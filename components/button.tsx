@@ -27,6 +27,7 @@ export function Button({
 }: ButtonProps) {
   const classes = cx(
     variant === "primary" ? "button-primary" : "button-secondary",
+    disabled && "opacity-70",
     className,
   );
 

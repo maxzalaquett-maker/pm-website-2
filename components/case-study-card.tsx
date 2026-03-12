@@ -9,7 +9,7 @@ type CaseStudyCardProps = {
 
 export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
-    <Card className="flex h-full flex-col">
+    <Card interactive className="flex h-full flex-col">
       <div className="card-meta">
         <span>{caseStudy.industry}</span>
         <span>{caseStudy.role}</span>

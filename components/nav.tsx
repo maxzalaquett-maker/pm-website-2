@@ -23,7 +23,7 @@ export function Nav() {
           {siteConfig.name}
         </Link>
         <nav aria-label="Primary navigation">
-          <ul className="flex items-center gap-2 text-sm text-[var(--muted)] sm:gap-3">
+          <ul className="flex items-center gap-2 sm:gap-3">
             {links.map((link) => {
               const isActive = pathname.startsWith(link.href);
 
