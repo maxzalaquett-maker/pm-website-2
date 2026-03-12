@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { PlatformSystemAnimation } from "@/components/platform-system-animation";
+import { HeroSystemAnimation } from "@/components/hero-system-animation";
 import { PageIntro } from "@/components/page-intro";
 import { siteConfig } from "@/lib/site-config";
 
@@ -24,7 +24,7 @@ export function Hero() {
         </div>
       </div>
       <div className="hero-visual-slot">
-        <PlatformSystemAnimation />
+        <HeroSystemAnimation />
       </div>
     </section>
   );
