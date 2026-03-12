@@ -20,7 +20,7 @@ export function Nav() {
           Max Zalaquett
         </Link>
         <nav aria-label="Primary navigation">
-          <ul className="flex items-center gap-5 text-sm text-[var(--muted)] sm:gap-7">
+          <ul className="flex items-center gap-2 text-sm text-[var(--muted)] sm:gap-3">
             {links.map((link) => {
               const isActive = pathname.startsWith(link.href);
 
@@ -28,8 +28,10 @@ export function Nav() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`hover:text-[var(--foreground)] ${
-                      isActive ? "text-[var(--foreground)]" : ""
+                    className={`inline-flex rounded-full border px-3 py-2 font-medium ${
+                      isActive
+                        ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--background)]"
+                        : "border-transparent hover:border-[var(--border)] hover:text-[var(--foreground)]"
                     }`}
                   >
                     {link.label}
@@ -38,7 +40,10 @@ export function Nav() {
               );
             })}
             <li>
-              <a className="hover:text-[var(--foreground)]" href="/resume.pdf">
+              <a
+                className="inline-flex rounded-full border border-transparent px-3 py-2 font-medium hover:border-[var(--border)] hover:text-[var(--foreground)]"
+                href="/resume.pdf"
+              >
                 Resume
               </a>
             </li>

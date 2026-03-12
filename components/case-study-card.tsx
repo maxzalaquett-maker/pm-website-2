@@ -27,7 +27,7 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
       </div>
       <Link
         href={`/work/${caseStudy.slug}`}
-        className="mt-6 inline-flex text-sm font-medium text-[var(--accent)] hover:text-[var(--foreground)]"
+        className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--foreground)] hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--background)]"
       >
         View case study
       </Link>

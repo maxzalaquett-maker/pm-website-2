@@ -41,7 +41,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <>
       <section className="mx-auto w-full max-w-4xl px-6 py-12 sm:py-16">
-        <Link className="text-sm text-[var(--accent)] hover:text-[var(--foreground)]" href="/work">
+        <Link
+          className="inline-flex rounded-full border border-[var(--border)] px-4 py-2 text-sm font-medium hover:border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--background)]"
+          href="/work"
+        >
           Back to work
         </Link>
         <div className="mt-6">
