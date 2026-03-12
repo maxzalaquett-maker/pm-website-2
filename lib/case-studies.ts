@@ -7,7 +7,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Designing a system-level account panel that allowed investors to see their full financial picture across fragmented financial services.",
     industry: "Financial services",
-    role: "Product strategist / UX strategy lead",
+    role: "Senior User Experience Strategist",
     skills: ["Platform strategy", "Information architecture", "Stakeholder alignment"],
     whyThisMattered:
       "Customers were managing relationships across multiple account types and providers, but the product experience made those services feel disconnected. That fragmentation reduced confidence and made routine planning harder than it should have been.",
@@ -39,8 +39,8 @@ export const caseStudies: CaseStudy[] = [
     title: "Improving Portfolio Analysis for Better Investment Decisions",
     summary:
       "Redesigning a portfolio analysis experience to help investors better understand diversification and performance.",
-    industry: "Investment platform",
-    role: "Product strategist / product design partner",
+    industry: "Financial services",
+    role: "Senior User Experience Strategist",
     skills: ["Product discovery", "Decision support design", "Data communication"],
     whyThisMattered:
       "Investors rely on portfolio views to make high-consequence decisions. When the analysis experience was difficult to interpret, it created hesitation and reduced the product's value as a decision-making tool.",
@@ -72,8 +72,8 @@ export const caseStudies: CaseStudy[] = [
     title: "Designing a Customer Feedback Community for a Healthcare Nonprofit",
     summary:
       "Defining a digital platform enabling healthcare customers to share insights and influence product improvements.",
-    industry: "Healthcare nonprofit",
-    role: "Product strategist / service design lead",
+    industry: "Healthcare",
+    role: "Solution Delivery Manager",
     skills: ["Service design", "Research synthesis", "Roadmap definition"],
     whyThisMattered:
       "The organization wanted a more direct relationship with the people it served, but lacked a structured way to gather ongoing customer insight and turn that input into product improvements.",
