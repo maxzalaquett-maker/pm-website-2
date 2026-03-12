@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { Section } from "@/components/section";
 import { SkillTag } from "@/components/skill-tag";
-import { caseStudies, caseStudiesBySlug } from "@/lib/case-studies";
+import { getCaseStudyBySlug, getCaseStudySlugs, getSiteConfig } from "@/lib/content";
 
 type CaseStudyPageProps = {
   params: Promise<{
@@ -13,26 +13,26 @@ type CaseStudyPageProps = {
 };
 
 export async function generateStaticParams() {
-  return caseStudies.map((caseStudy) => ({ slug: caseStudy.slug }));
+  return getCaseStudySlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const caseStudy = caseStudiesBySlug[slug];
+  const caseStudy = getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     return {};
   }
 
   return {
-    title: `${caseStudy.title} | Max Zalaquett`,
+    title: `${caseStudy.title} | ${getSiteConfig().name}`,
     description: caseStudy.summary,
   };
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = await params;
-  const caseStudy = caseStudiesBySlug[slug];
+  const caseStudy = getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     notFound();

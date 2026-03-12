@@ -1,16 +1,16 @@
 import { MetadataRoute } from "next";
 
-import { caseStudies } from "@/lib/case-studies";
+import { getCaseStudySlugs, getSiteConfig } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://example.vercel.app";
+  const baseUrl = getSiteConfig().siteUrl;
 
   return [
     "",
     "/work",
     "/principles",
     "/about",
-    ...caseStudies.map((caseStudy) => `/work/${caseStudy.slug}`),
+    ...getCaseStudySlugs().map((slug) => `/work/${slug}`),
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

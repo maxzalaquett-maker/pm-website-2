@@ -1,8 +1,10 @@
 import { CaseStudyCard } from "@/components/case-study-card";
 import { Section } from "@/components/section";
-import { caseStudies } from "@/lib/case-studies";
+import { getAllCaseStudies } from "@/lib/content";
 
 export default function WorkPage() {
+  const caseStudies = getAllCaseStudies();
+
   return (
     <Section
       eyebrow="Work"

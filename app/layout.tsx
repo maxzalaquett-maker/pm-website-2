@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/footer";
 import { Nav } from "@/components/nav";
+import { siteConfig } from "@/lib/site-config";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Max Zalaquett | Product Strategist",
-  description:
-    "Personal portfolio for a product strategist focused on building trusted digital products.",
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

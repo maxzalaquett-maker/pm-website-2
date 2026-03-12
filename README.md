@@ -15,8 +15,9 @@ This project is ready for deployment on Vercel as a standard Next.js application
 
 ## Content updates
 
-- Edit case studies in `lib/case-studies.ts`
-- Edit product principles in `lib/principles.ts`
+- Edit global site settings in `lib/site-config.ts`
+- Edit raw case studies in `data/case-studies.ts`
+- Edit raw product principles in `data/principles.ts`
 - Replace `public/resume.pdf` with the actual resume file
 
 ## Optional work page protection

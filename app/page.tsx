@@ -3,23 +3,19 @@ import Link from "next/link";
 import { CaseStudyCard } from "@/components/case-study-card";
 import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
-import { caseStudies } from "@/lib/case-studies";
-
-const proofItems = [
-  "10+ years in digital product and UX strategy",
-  "Finance and healthcare platforms",
-  "Complex systems made clearer for customers",
-  "Cross-functional leadership across product, design, and stakeholders",
-];
+import { getFeaturedCaseStudies, getSiteConfig } from "@/lib/content";
 
 export default function HomePage() {
+  const site = getSiteConfig();
+  const featuredCaseStudies = getFeaturedCaseStudies();
+
   return (
     <>
       <Hero />
 
       <Section>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {proofItems.map((item) => (
+          {site.home.proofItems.map((item) => (
             <div key={item} className="rounded-3xl border border-[var(--border)] bg-white/60 p-5">
               <p className="text-sm leading-6 text-[var(--muted)]">{item}</p>
             </div>
@@ -34,7 +30,7 @@ export default function HomePage() {
         description="Examples of strategy work focused on trust, clarity, and better decision-making in complex domains."
       >
         <div className="grid gap-6 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
+          {featuredCaseStudies.map((caseStudy) => (
             <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
           ))}
         </div>

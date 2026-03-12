@@ -1,8 +1,10 @@
 import { PrincipleCard } from "@/components/principle-card";
 import { Section } from "@/components/section";
-import { principles } from "@/lib/principles";
+import { getPrinciples } from "@/lib/content";
 
 export default function PrinciplesPage() {
+  const principles = getPrinciples();
+
   return (
     <Section
       eyebrow="Principles"
