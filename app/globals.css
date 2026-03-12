@@ -85,7 +85,6 @@ body {
     position: relative;
     overflow: hidden;
     min-height: 21rem;
-    border: 1px solid var(--border);
     border-radius: var(--radius-card);
     background:
       radial-gradient(circle at top left, rgb(31 78 82 / 0.08), transparent 42%),

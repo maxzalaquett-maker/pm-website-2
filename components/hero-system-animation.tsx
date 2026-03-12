@@ -394,9 +394,9 @@ export function HeroSystemAnimation() {
         />
 
         <g opacity="0.96">
-          <circle cx="92" cy="224" r="74" fill="rgb(255 255 255 / 0.3)" stroke="var(--border)" />
+          <circle cx="92" cy="224" r="74" fill="rgb(255 255 255 / 0.3)" />
           <image
-            href="/yellow-headshot-3.png"
+            href="/Small-headshot.png"
             x="18"
             y="150"
             width="148"
