@@ -4,9 +4,9 @@
 :root {
   --background: #fafaf8;
   --foreground: #1f2933;
-  --muted: #6b7280;
-  --accent: #2f6f73;
-  --border: #e5e7eb;
+  --muted: #374151;
+  --accent: #1f4e52;
+  --border: #8b8a7c;
 }
 
 html {

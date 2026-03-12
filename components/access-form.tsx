@@ -30,7 +30,7 @@ export function AccessForm({ nextPath }: AccessFormProps) {
           className="w-full rounded-2xl border border-[var(--border)] bg-[var(--background)] px-4 py-3 outline-none focus:border-[var(--accent)]"
         />
       </div>
-      {state.error ? <p className="text-sm text-[#a44d3f]">{state.error}</p> : null}
+      {state.error ? <p className="text-sm text-[#7a2e20]">{state.error}</p> : null}
       <button
         type="submit"
         disabled={isPending}
