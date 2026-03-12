@@ -26,7 +26,7 @@ export default async function AccessPage({ searchParams }: AccessPageProps) {
         ) : (
           <div className="space-y-4">
             <p className="text-sm leading-6 text-[var(--muted)]">
-              Work protection is currently disabled because `WORK_PAGE_PASSWORD` is not set.
+              Access is currently open.
             </p>
             <a
               href={nextPath}

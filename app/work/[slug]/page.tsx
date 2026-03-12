@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
   }
 
   return {
-    title: `${caseStudy.title} | Max [Last Name]`,
+    title: `${caseStudy.title} | Max Zalaquett`,
     description: caseStudy.summary,
   };
 }
@@ -40,18 +40,18 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   return (
     <>
-      <section className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-24">
+      <section className="mx-auto w-full max-w-4xl px-6 py-12 sm:py-16">
         <Link className="text-sm text-[var(--accent)] hover:text-[var(--foreground)]" href="/work">
           Back to work
         </Link>
-        <div className="mt-8">
+        <div className="mt-6">
           <p className="text-sm font-medium uppercase tracking-[0.18em] text-[var(--accent)]">
             {caseStudy.industry}
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">{caseStudy.title}</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)]">{caseStudy.summary}</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">{caseStudy.summary}</p>
         </div>
-        <dl className="mt-10 grid gap-6 rounded-3xl border border-[var(--border)] bg-white/60 p-6 sm:grid-cols-3">
+        <dl className="mt-8 grid gap-5 rounded-3xl border border-[var(--border)] bg-white/60 p-5 sm:grid-cols-3">
           <div>
             <dt className="text-sm font-medium text-[var(--muted)]">Industry</dt>
             <dd className="mt-2 text-base">{caseStudy.industry}</dd>
@@ -86,7 +86,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <Section title="Discovery and insights">
         <ul className="grid gap-4">
           {caseStudy.discoveryAndInsights.map((item) => (
-            <li key={item} className="rounded-3xl border border-[var(--border)] bg-white/60 p-5 text-[var(--muted)]">
+            <li key={item} className="rounded-3xl border border-[var(--border)] bg-white/60 p-4 text-[var(--muted)]">
               {item}
             </li>
           ))}
@@ -96,7 +96,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <Section title="Key decisions">
         <ul className="grid gap-4">
           {caseStudy.keyDecisions.map((item) => (
-            <li key={item} className="rounded-3xl border border-[var(--border)] bg-white/60 p-5 text-[var(--muted)]">
+            <li key={item} className="rounded-3xl border border-[var(--border)] bg-white/60 p-4 text-[var(--muted)]">
               {item}
             </li>
           ))}

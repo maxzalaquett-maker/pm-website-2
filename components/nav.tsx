@@ -17,7 +17,7 @@ export function Nav() {
     <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[color:rgba(250,250,248,0.92)] backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
         <Link href="/" className="text-sm font-semibold tracking-tight sm:text-base">
-          Max [Last Name]
+          Max Zalaquett
         </Link>
         <nav aria-label="Primary navigation">
           <ul className="flex items-center gap-5 text-sm text-[var(--muted)] sm:gap-7">

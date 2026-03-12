@@ -38,9 +38,6 @@ export function AccessForm({ nextPath }: AccessFormProps) {
       >
         {isPending ? "Checking..." : "Unlock work"}
       </button>
-      <p className="text-sm text-[var(--muted)]">
-        Set `WORK_PAGE_PASSWORD` in your environment to control access.
-      </p>
     </form>
   );
 }

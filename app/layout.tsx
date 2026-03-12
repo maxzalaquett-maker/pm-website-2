@@ -6,7 +6,7 @@ import { Nav } from "@/components/nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Max [Last Name] | Product Strategist",
+  title: "Max Zalaquett | Product Strategist",
   description:
     "Personal portfolio for a product strategist focused on building trusted digital products.",
 };
