@@ -18,3 +18,13 @@ This project is ready for deployment on Vercel as a standard Next.js application
 - Edit case studies in `lib/case-studies.ts`
 - Edit product principles in `lib/principles.ts`
 - Replace `public/resume.pdf` with the actual resume file
+
+## Optional work page protection
+
+Set `WORK_PAGE_PASSWORD` to lightly protect `/work` and `/work/[slug]`.
+
+```bash
+WORK_PAGE_PASSWORD=your-password
+```
+
+If `WORK_PAGE_PASSWORD` is not set, the work section stays public.
